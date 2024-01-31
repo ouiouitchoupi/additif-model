@@ -48,26 +48,26 @@ class Regression:
 
             plt.plot(
                 self.data_preparation_object.dataset_df['Years'][:split_index],
-                self.data_preparation_object.y_train,
-                "bo-",
+                self.data_preparation_object.y_train, "o:", color=
+                "#8A2BE2",
                 label='Actual Train Sales'
             )
             plt.plot(
                 self.data_preparation_object.dataset_df['Years'][:split_index],
                 y_train_predicted,
-                "indigo",
+                "#00FFFF",
                 label='Predicted Train Sales'
             )
             plt.plot(
                 self.data_preparation_object.dataset_df['Years'][split_index:],
-                self.data_preparation_object.y_test,
-                "ro-",
+                self.data_preparation_object.y_test, "o:",color=
+                "orange",
                 label='Actual Test Sales'
             )
             plt.plot(
                 self.data_preparation_object.dataset_df['Years'][split_index:],
                 y_test_predicted,
-                "orange",
+                "red",
                 label='Predicted Test Sales'
             )
 
@@ -78,6 +78,8 @@ class Regression:
                 color='grey',
                 alpha=0.2,label = "95% confidence interval"
             )
+
+
 
 
             plt.xlabel('Years')
