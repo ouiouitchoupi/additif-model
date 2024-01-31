@@ -75,7 +75,7 @@ class Regression:
                 years_test,
                 y_test_predicted - ci_test,
                 y_test_predicted + ci_test,
-                color='red',
+                color='grey',
                 alpha=0.2,label = "95% confidence interval"
             )
 
